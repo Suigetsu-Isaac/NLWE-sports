@@ -55,6 +55,29 @@ app.post('/games/:pass', async (request,response) =>{
     }
 } )
 
+app.put('/games/:id/:pass',async(request,response)=>{
+    const pass:string = request.params.pass
+
+    if (pass === "Demise"){
+
+        const id = request.params.id
+        const body = request.body
+
+        const game = await prisma.game.update({
+            where:{
+                id:id
+            },data:{
+                title: body.title,
+                bannerUrl: body.bannerUrl
+            }
+        })
+        response.status(201).json(game)
+    }
+    else{
+        return response.status(404).send()
+    }
+})
+
 app.get("/games", async (request,response) => {
     
     const games = await prisma.game.findMany(
