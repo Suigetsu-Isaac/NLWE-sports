@@ -8,12 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 // O prisma Cliente funciona é uma classe logo devemos instanciala
-const prisma = new PrismaClient(
-    { 
-        // serve para verificar as query, não é necessário ir para produção.
-        log: ['query']
-    }
-)
+const prisma = new PrismaClient()
 
 // o primeiro parametro é o caminho, e o segundo é a função
 

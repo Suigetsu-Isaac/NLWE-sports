@@ -82,12 +82,7 @@ var import_cors = __toESM(require("cors"));
 var app = (0, import_express.default)();
 app.use(import_express.default.json());
 app.use((0, import_cors.default)());
-var prisma = new import_client.PrismaClient(
-  {
-    // serve para verificar as query, não é necessário ir para produção.
-    log: ["query"]
-  }
-);
+var prisma = new import_client.PrismaClient();
 app.post("/games/:id/ads", (request, response) => __async(exports, null, function* () {
   const gameId = request.params.id;
   const body = request.body;
