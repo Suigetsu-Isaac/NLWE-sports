@@ -37,6 +37,23 @@ app.post("/games/:id/ads", async (request,response) =>{
 
 })
 
+app.post('/games/:pass', async (request,response) =>{
+    const pass:string = request.params.pass
+    
+    if (pass === "LetRiper"){
+        const body = request.body 
+
+        const game = await prisma.game.create({
+            data:{
+                title: body.title,
+                bannerUrl: body.bannerUrl
+            }
+        })
+        response.status(201).json(game)
+    } else{
+        return response.status(404).send();
+    }
+} )
 
 app.get("/games", async (request,response) => {
     
