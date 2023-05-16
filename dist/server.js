@@ -158,4 +158,6 @@ app.get("/ads/:id/discord", (request, response) => __async(exports, null, functi
   });
   return response.json(discord);
 }));
-app.listen(3333);
+app.listen(3333, () => {
+  console.log("server running");
+});
