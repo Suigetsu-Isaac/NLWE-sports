@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mobile",
+    "name": "nlwEsport",
     "slug": "mobile",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#121214"
-      }
+      },
+      "package": "com.babyface.nlwEsport"
     },
     "web": {
       "favicon": "./assets/favicon.png"
