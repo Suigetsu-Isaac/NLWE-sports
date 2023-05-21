@@ -2,6 +2,7 @@
 import { THEME } from '../../theme';
 
  import {styles} from './styles'
+import React from 'react';
 
  export function Loading (){
 

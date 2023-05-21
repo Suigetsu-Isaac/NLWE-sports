@@ -1,5 +1,5 @@
 {
-  "name": "mobile",
+  "name": "nlwesport",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -12,27 +12,28 @@
     "@expo-google-fonts/inter": "^0.2.2",
     "@react-navigation/native-stack": "^6.9.0",
     "@react-navigation/stack": "^6.3.0",
-    "expo": "~46.0.9",
-    "expo-clipboard": "~3.1.0",
-    "expo-font": "~10.2.0",
-    "expo-linear-gradient": "~11.4.0",
-    "expo-status-bar": "~1.4.0",
+    "expo": "^48.0.0",
+    "expo-clipboard": "~4.1.2",
+    "expo-font": "~11.1.1",
+    "expo-linear-gradient": "~12.1.2",
+    "expo-notifications": "~0.18.1",
+    "expo-status-bar": "~1.4.4",
     "phosphor-react-native": "^1.1.2",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-native": "^0.69.5",
-    "react-native-gesture-handler": "~2.5.0",
-    "react-native-safe-area-context": "4.3.1",
-    "react-native-screens": "~3.15.0",
-    "react-native-svg": "12.3.0",
-    "react-native-web": "~0.18.7",
-    "expo-notifications": "~0.16.1"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.71.3",
+    "react-native-gesture-handler": "~2.9.0",
+    "react-native-safe-area-context": "4.5.0",
+    "react-native-screens": "~3.20.0",
+    "react-native-svg": "13.4.0",
+    "react-native-web": "~0.18.11",
+    "@expo/webpack-config": "^18.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@types/react": "~18.0.14",
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.0.27",
     "@types/react-native": "~0.69.1",
-    "typescript": "~4.3.5"
+    "typescript": "^4.9.4"
   },
   "private": true
 }

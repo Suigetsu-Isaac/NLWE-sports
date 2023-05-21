@@ -2,12 +2,13 @@ import {Image, FlatList} from 'react-native';
 import {useEffect,useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {styles} from './styles'
-
+import uri from '../../utils/routes'
 import logoImg from '../../assets/logo-nlw-esports.png'
 import { Heading } from '../../components/Heading';
 import { GameCard, GameCardProps } from '../../components/GameCard';
 import { Background } from '../../components/Background';
 import { useNavigation } from  '@react-navigation/native';
+import React from 'react';
 
 export function Home (){
 
@@ -16,7 +17,7 @@ export function Home (){
 
     useEffect(() => {
 
-        fetch('http://192.168.1.105:3333/games')
+        fetch(uri+'/games')
         .then(response => response.json())
         .then(data => setGames(data))
     },[])
@@ -27,7 +28,7 @@ export function Home (){
     }
 
    return(
-    <Background>
+    <Background children={undefined}>
        <SafeAreaView style = {styles.container}>
            <Image 
             source={logoImg}
@@ -39,7 +40,7 @@ export function Home (){
         subtitle="Selecione o game que deseja jogar..."
         />   
        
-<FlatList 
+<FlatList
     data = {games}
     keyExtractor = {(item) => item.id}
     horizontal

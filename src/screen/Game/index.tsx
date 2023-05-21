@@ -1,5 +1,5 @@
 import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
-
+import uri from '../../utils/routes';
 import { Entypo } from "@expo/vector-icons";
 
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -16,6 +16,7 @@ import { Heading } from "../../components/Heading";
 import { DuoCard, DuoCardProps } from "../../components/DuoCard";
 import { useEffect, useState } from "react";
 import { DuoMatch } from "../../components/DuoMatch";
+import React from "react";
 
 export function Game() {
   const route = useRoute();
@@ -31,19 +32,19 @@ export function Game() {
   const [discordDuoSelected, setDiscordDuoSelected] = useState<string>("");
 
   async function getDiscordUser(adsId:string) {
-    fetch(`http://192.168.1.105:3333/ads/${adsId}/discord`)
+    fetch(`${uri}/ads/${adsId}/discord`)
     .then((response) => response.json())
     .then((data) =>{setDiscordDuoSelected(data.discord)});
   }
 
   useEffect(() => {
-    fetch(`http://192.168.1.105:3333/games/${game.id}/ads`)
+    fetch(`${uri}/games/${game.id}/ads`)
       .then((response) => response.json())
       .then((data) => setDuos(data));
   }, []);
 
   return (
-    <Background>
+    <Background children={undefined}>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={goBackHome}>

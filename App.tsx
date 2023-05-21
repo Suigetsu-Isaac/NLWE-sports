@@ -18,6 +18,7 @@ import { Loading } from './src/components/Loading';
 
 import './src/services/notificationsConfig';
 import {getPushNotificationToken} from './src/services/getPushNotificationToken';
+import React from 'react';
 
 export default function App() {
 
@@ -54,7 +55,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <Background >
+    <Background>
      <StatusBar 
       barStyle = 'light-content'
       backgroundColor= 'transparent'
