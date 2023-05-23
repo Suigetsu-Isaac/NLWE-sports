@@ -63,7 +63,7 @@ export default function CreateAdModal() {
           Publique um anúncio
         </Dialog.Title>
 
-        <form onSubmit={handleFormSubmit} className="mt-8 flex-col gap-4">
+        <form onSubmit={handleFormSubmit} className="mt-4 sm:mt-8 flex-col gap-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="game" className="font-semibold">
               Qual o game?
@@ -86,13 +86,13 @@ export default function CreateAdModal() {
             </select>
           </div>
 
-          <div className="flex flex-col gap-2 mt-4">
+          <div className="flex flex-col gap-2 mt-2">
             <label htmlFor="name">Seu nome (ou nickname)</label>
             <Input id="name" name="name" placeholder="Como te chamam dentro do game?" />
           </div>
 
           <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-3">
-            <div className="flex flex-col gap-2 mt-4">
+            <div className="flex flex-col gap-2 mt-2">
               <label htmlFor="yearsPlaying">Joga a quantos anos?</label>
               <Input
                 id="yearsPlaying"
@@ -101,17 +101,17 @@ export default function CreateAdModal() {
                 placeholder="Tudo bem ser ZERO"
               />
             </div>
-            <div className="flex flex-col gap-2 mt-4">
+            <div className="flex flex-col gap-2 mt-2">
               <label htmlFor="discord">Qual o seu Discord?</label>
               <Input id="discord"
               name="discord" placeholder="Usuario#0000" />
             </div>
           </div>
 
-          <div className="flex sm:gap-6 gap-4 mt-4">
+          <div className="flex sm:gap-6 gap-4 mt-2">
             <div className="flex flex-col gap-3">
               <label htmlFor="weekDays">Quando constuma <br/> jogar?</label>
-              <ToogleGroup.Root className="grid sm:grid-cols-4 grid-cols-3 gap-1 sm:gap-2" type="multiple" onValueChange={setWeekDays}>
+              <ToogleGroup.Root className="grid grid-cols-4 gap-1 sm:gap-2" type="multiple" onValueChange={setWeekDays}>
 
                 <ToogleGroup.Item value="0"
                  
@@ -180,7 +180,7 @@ export default function CreateAdModal() {
             Constumo me conectar no chat de voz
           </label>
 
-          <footer className="mt-4 flex items-center justify-end  gap-4">
+          <footer className="mt-2 flex items-center justify-end  gap-4">
             <Dialog.Close className="bg-zinc-500 px-5 h-12 text-white font-semibold rounded-md hover:bg-zinc-600 ">
               Cancelar
             </Dialog.Close>
