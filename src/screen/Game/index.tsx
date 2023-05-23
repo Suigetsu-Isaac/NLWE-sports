@@ -44,7 +44,7 @@ export function Game() {
   }, []);
 
   return (
-    <Background children={undefined}>
+    <Background>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={goBackHome}>

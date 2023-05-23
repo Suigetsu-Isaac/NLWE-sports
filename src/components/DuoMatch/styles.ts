@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     },
     label :{
         fontFamily: THEME.FONT_FAMILY.SEMI_BOLD,
-        marginTop: 24,
+        marginTop: 20,
         marginBottom: 8, 
     },
     discordButton :{

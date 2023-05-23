@@ -28,7 +28,7 @@ export function Home (){
     }
 
    return(
-    <Background children={undefined}>
+    <Background>
        <SafeAreaView style = {styles.container}>
            <Image 
             source={logoImg}
