@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
       <img src={logoImg} alt="logo image" />
-      <h1 className="sm:text-[64px] text-[3rem] text-white font-black mt-20">
+      <h1 className="md:text-[64px] text-[3rem] text-white font-black mt-20">
         Seu{" "}
         <span className="text-transparent bg-nlw-gradient bg-clip-text">
           duo
@@ -54,7 +54,7 @@ function App() {
         está aqui.
       </h1>
         
-        { widthScreen > 640 ? 
+        { widthScreen > 720 ? 
 
         <div className="grid grid-cols-6 gap-6 mt-16">
         {games.map((game) => {
