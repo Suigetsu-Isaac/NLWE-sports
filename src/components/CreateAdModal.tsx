@@ -86,13 +86,13 @@ export default function CreateAdModal() {
             </select>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 mt-4">
             <label htmlFor="name">Seu nome (ou nickname)</label>
             <Input id="name" name="name" placeholder="Como te chamam dentro do game?" />
           </div>
 
           <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-3">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mt-4">
               <label htmlFor="yearsPlaying">Joga a quantos anos?</label>
               <Input
                 id="yearsPlaying"
@@ -101,17 +101,17 @@ export default function CreateAdModal() {
                 placeholder="Tudo bem ser ZERO"
               />
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mt-4">
               <label htmlFor="discord">Qual o seu Discord?</label>
               <Input id="discord"
               name="discord" placeholder="Usuario#0000" />
             </div>
           </div>
 
-          <div className="flex gap-6">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="weekDays">Quando constuma jogar?</label>
-              <ToogleGroup.Root className="grid grid-cols-4 gap-2" type="multiple" onValueChange={setWeekDays}>
+          <div className="flex sm:gap-6 gap-4 mt-4">
+            <div className="flex flex-col gap-3">
+              <label htmlFor="weekDays">Quando constuma <br/> jogar?</label>
+              <ToogleGroup.Root className="grid sm:grid-cols-4 grid-cols-3 gap-1 sm:gap-2" type="multiple" onValueChange={setWeekDays}>
 
                 <ToogleGroup.Item value="0"
                  
@@ -162,7 +162,7 @@ export default function CreateAdModal() {
             <div className="flex flex-col gap-2 flex-1">
               <label htmlFor="hoursStart">Qual horário do dia?</label>
 
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 sm:gap-2">
                 <Input id="hoursStart" name="hoursStart" type="time" placeholder="De" />
                 <Input id="hoursEnd" name="hoursEnd" type="time" placeholder="Até" />
               </div>
