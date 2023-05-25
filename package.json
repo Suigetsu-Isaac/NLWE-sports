@@ -2,6 +2,8 @@
   "name": "nlwesport",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "publisher": "IsaacSouzaTSI",
+  "author": {"name": "Isaac Souza","email": "isaacsouzatsi@gmail.com","url": "https://github.com/Suigetsu-Isaac"},
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
